@@ -1,4 +1,4 @@
-import { normalizeExplorerTrace } from './flexTrace'
+import { normalizeExplorerTrace } from './flexTrace.js'
 
 const DEFAULT_FALLBACK_RPC = 'https://eth.blockscout.com/api/eth-rpc'
 const RPC_METHODS = new Set([

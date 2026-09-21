@@ -1,6 +1,6 @@
 import type { IncomingMessage, ServerResponse } from 'node:http'
 
-import { handleFlexRpc } from '../server/flexRpc'
+import { handleFlexRpc } from '../server/flexRpc.js'
 
 async function readJson(request: IncomingMessage): Promise<unknown> {
   const chunks: Buffer[] = []

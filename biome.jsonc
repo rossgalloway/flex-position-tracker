@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
   "files": {
-    "includes": ["**", "!dist", "!node_modules", "!.tsbuild", "!src/lib/*.js"]
+    "includes": ["**", "!dist", "!node_modules", "!.tsbuild", "!.vercel", "!src/lib/*.js"]
   },
   "formatter": {
     "enabled": true,
