@@ -7,10 +7,15 @@ import {
   classifyTimelineRedemptions,
   FLEX_MARKETS,
   groupPositionsByWallet,
-  POSITION_GROUPS,
   positionConfigsFromOpenLogs,
   sortPositionsForReport,
 } from "./flexPositionTracker.js";
+
+const POSITION_GROUPS = buildPositionGroups([
+  "0x4449dd09067dcaa55c15f40b465a5173778f8100",
+  "0x80c9ac867b2d36b7e8d74646e074c460a008c0cb",
+  "0xa7b6f3d18db39f65c8056d0892af76c07d15fc5a",
+]);
 
 const word = (value) => BigInt(value).toString(16).padStart(64, "0");
 const openTopic = "0x48cc6255485654cd31337a688b4a1e06f8a768af7ec431040b7015bbb57d44b7";

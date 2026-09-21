@@ -60,12 +60,6 @@ const SELECTORS = {
   getPrice: "0x11f37ceb",
 };
 
-export const DEFAULT_TRACKED_WALLETS = [
-  "0x4449dd09067dcaa55c15f40b465a5173778f8100",
-  "0x80c9ac867b2d36b7e8d74646e074c460a008c0cb",
-  "0xa7b6f3d18db39f65c8056d0892af76c07d15fc5a",
-];
-
 export const FLEX_MARKETS = [
   {
     key: "ysybold",
@@ -113,7 +107,6 @@ export function buildPositionGroups(wallets, markets = FLEX_MARKETS) {
   })));
 }
 
-export const POSITION_GROUPS = buildPositionGroups(DEFAULT_TRACKED_WALLETS);
 
 let rpcId = 0;
 
@@ -659,7 +652,7 @@ async function readPosition(config, snapshotBlock, snapshotTimestamp, projection
 }
 
 export async function fetchFlexPositionSnapshot({
-  groups = POSITION_GROUPS,
+  groups = [],
   groupKeys = groups.map((group) => group.key),
   projectionSource = "automatic",
   signal,
@@ -1096,7 +1089,7 @@ function saveWalletPreferences(wallets, selectedWallets) {
 
 async function requestTrackedWallets(method = "GET", address, selection) {
   const stored = window.localStorage.getItem(WALLETS_STORAGE_KEY);
-  const saved = stored === null ? [...DEFAULT_TRACKED_WALLETS] : JSON.parse(stored);
+  const saved = stored === null ? [] : JSON.parse(stored);
   // Older versions stored only the wallet array and showed every tracked wallet.
   const wallets = Array.isArray(saved) ? saved : saved?.wallets;
   if (!Array.isArray(wallets)) throw new Error("Saved wallet list is invalid");
@@ -1521,9 +1514,9 @@ export function mountFlexPositionTracker(root) {
       renderTrackedWallets(savedSelection);
     })
     .catch((error) => {
-      trackedWallets = DEFAULT_TRACKED_WALLETS;
+      trackedWallets = [];
       renderTrackedWallets(trackedWallets);
-      setWalletMessage(`Saved wallet list unavailable: ${error.message}. Using defaults.`, "error");
+      setWalletMessage(`Saved wallet list unavailable: ${error.message}. No addresses loaded.`, "error");
     })
     .finally(refresh);
 }

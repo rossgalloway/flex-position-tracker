@@ -41,7 +41,7 @@ bun run build
 
 Deploy the repository to Vercel and configure the server-only `RPC_URL_1` environment variable. `api/flex-rpc.ts` exposes only the read methods used by the tracker and falls back to Blockscout when the primary provider is unavailable.
 
-The tracked-wallet list lives in browser `localStorage`, so each visitor controls their own addresses without a database.
+New browsers start with an empty wallet list. The tracked-wallet list lives in browser `localStorage`, so each visitor controls their own addresses without a database.
 
 ## Accounting boundary
 

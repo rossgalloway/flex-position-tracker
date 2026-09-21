@@ -83,6 +83,18 @@ afterEach(() => {
 })
 
 describe('wallet filtering', () => {
+  it.each([null, 'invalid json'])(
+    'starts empty without usable local preferences: %s',
+    async (saved) => {
+      localStorage.clear()
+      if (saved !== null) localStorage.setItem('flex-position-tracker:wallets', saved)
+      render(<App />)
+      await screen.findByText('No tracked addresses.')
+      expect(troves()).toHaveLength(0)
+      expect(fixtureFetch).not.toHaveBeenCalled()
+    },
+  )
+
   it('filters Troves and aggregate totals immediately without fetching, and restores cached wallets', async () => {
     render(<App />)
     await waitFor(() => expect(troves()).toHaveLength(3))
