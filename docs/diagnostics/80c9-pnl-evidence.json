@@ -1,0 +1,210 @@
+{
+  "snapshot": {
+    "block": 26006628,
+    "timestamp": 1789761479,
+    "positions": [
+      {
+        "key": "yvusd-80c9ac867b2d36b7e8d74646e074c460a008c0cb-25747111-1694",
+        "manager": "0x8ee72c388aA73096338EE18CD46a39D98b8983c9",
+        "discoveryFromBlock": 25690643,
+        "collateralToken": "0x696d02Db93291651ED510704c9b286841d506987",
+        "collateralSymbol": "yvUSD",
+        "collateralDecimals": 6,
+        "borrowSymbol": "USDC",
+        "borrowDecimals": 6,
+        "marketKey": "yvusd",
+        "wallet": "0x80c9ac867b2d36b7e8d74646e074c460a008c0cb",
+        "groupKey": "yvusd-80c9ac867b2d36b7e8d74646e074c460a008c0cb",
+        "troveId": "29112767855437768333518924555727633102556784322185275145844553028501564620475",
+        "openBlock": 25747111,
+        "openLogIndex": 1694,
+        "troveNumber": 1,
+        "troveCount": 1,
+        "open": {
+          "collateral": "235272508286",
+          "borrowed": "215582266934",
+          "upfrontFee": "16543133",
+          "annualInterestRate": "48000"
+        },
+        "openTimestamp": 1786636271,
+        "openTransaction": "0x04653de73926193da82a6e904c250e5fc673c8c754e5ab239f351b5e6da11ee6",
+        "rateAdjustments": [
+          {
+            "annualInterestRate": "51000",
+            "upfrontFee": "0",
+            "block": 25990918,
+            "transactionHash": "0x292fb02de5924545d3784adde686bdd754774e4fe55bd37d4df9d5493f91511a"
+          }
+        ],
+        "redemptions": [
+          {
+            "collateral": "46755334398",
+            "debt": "48123816281",
+            "block": 25974671,
+            "transactionHash": "0x36a82d3cf6dd778adf37ceacb58c79c68cbfdd3a2be09bf594332ed2276b2eae",
+            "price": "1029269000000000000000000000000000000"
+          },
+          {
+            "collateral": "110362461283",
+            "debt": "113599944085",
+            "block": 25976769,
+            "transactionHash": "0x53a51270b65f72864e54f1a3e542f3f7b027c91c56b8ecf2f6bd30c8698b58db",
+            "price": "1029335000000000000000000000000000000"
+          },
+          {
+            "collateral": "4705697972",
+            "debt": "4844690174",
+            "block": 25983011,
+            "transactionHash": "0x244803fbbb429fae1a94d83c616a894684328ece19c3a35095ef0d1446f04e76",
+            "price": "1029537000000000000000000000000000000"
+          }
+        ],
+        "closeout": null,
+        "timeline": [
+          {
+            "kind": "open",
+            "label": "Opened",
+            "collateral": "235272508286",
+            "borrowed": "215582266934",
+            "upfrontFee": "16543133",
+            "annualInterestRate": "48000",
+            "block": 25747111,
+            "logIndex": 1694,
+            "timestamp": 1786636271,
+            "transactionHash": "0x04653de73926193da82a6e904c250e5fc673c8c754e5ab239f351b5e6da11ee6"
+          },
+          {
+            "kind": "redeem",
+            "label": "Partial Redemption",
+            "collateral": "46755334398",
+            "debt": "48123816281",
+            "block": 25974671,
+            "logIndex": 41,
+            "timestamp": 1789376579,
+            "transactionHash": "0x36a82d3cf6dd778adf37ceacb58c79c68cbfdd3a2be09bf594332ed2276b2eae",
+            "redemptionType": "partial"
+          },
+          {
+            "kind": "redeem",
+            "label": "Partial Redemption",
+            "collateral": "110362461283",
+            "debt": "113599944085",
+            "block": 25976769,
+            "logIndex": 248,
+            "timestamp": 1789401827,
+            "transactionHash": "0x53a51270b65f72864e54f1a3e542f3f7b027c91c56b8ecf2f6bd30c8698b58db",
+            "redemptionType": "partial"
+          },
+          {
+            "kind": "redeem",
+            "label": "Partial Redemption",
+            "collateral": "4705697972",
+            "debt": "4844690174",
+            "block": 25983011,
+            "logIndex": 169,
+            "timestamp": 1789477067,
+            "transactionHash": "0x244803fbbb429fae1a94d83c616a894684328ece19c3a35095ef0d1446f04e76",
+            "redemptionType": "partial"
+          },
+          {
+            "kind": "rate",
+            "label": "Rate changed",
+            "annualInterestRate": "51000",
+            "upfrontFee": "0",
+            "block": 25990918,
+            "logIndex": 481,
+            "timestamp": 1789572299,
+            "transactionHash": "0x292fb02de5924545d3784adde686bdd754774e4fe55bd37d4df9d5493f91511a"
+          },
+          {
+            "kind": "borrow",
+            "label": "Debt increased",
+            "debtAfterBorrow": "65951771472",
+            "upfrontFee": "2174115",
+            "block": 25990923,
+            "logIndex": 455,
+            "timestamp": 1789572359,
+            "transactionHash": "0xde4232599143c16be80993b87d6aac27eab43c77d4fe948e4ffb9a963dddf405"
+          }
+        ],
+        "hasPositionChanges": true,
+        "status": "active",
+        "current": {
+          "recordedDebt": "65951771472",
+          "collateral": "73449014633",
+          "annualInterestRate": "51000",
+          "lastDebtUpdateTime": 1789572359,
+          "lastDebtIncreaseTime": 1789572359,
+          "lastInterestRateAdjustmentTime": 1789572299,
+          "owner": "0x80c9ac867b2d36b7e8d74646e074c460a008c0cb",
+          "statusCode": 1,
+          "debt": "65971942474"
+        },
+        "openPrice": "1023906000000000000000000000000000000",
+        "currentPrice": "1030185000000000000000000000000000000",
+        "priceOracle": "0xdb8dbb6c0548341aea85ebaafa681b4a8c077d2e",
+        "projection": {
+          "mode": "automatic",
+          "source": "estimated",
+          "label": "Kong estimated APY",
+          "apy": "65036143519502820",
+          "apr": "63046925632242790",
+          "note": "",
+          "sourceUrl": "https://kong.yearn.fi/api/rest/snapshot/1/0x696d02db93291651ed510704c9b286841d506987"
+        },
+        "calculation": {
+          "collateralValueAtOpen": "240896932869",
+          "currentCollateralValue": "75666073139",
+          "openingDebt": "215598810067",
+          "currentDebt": "65971942474",
+          "initialCapitalBeforeFee": "25314665935",
+          "openingEquity": "25298122802",
+          "currentEquity": "9694130665",
+          "endingValue": "9694130665",
+          "upfrontFee": "16543133",
+          "upfrontFeeRate": "653499953050042",
+          "rateAdjustmentFees": "0",
+          "totalOneTimeFees": "16543133",
+          "oneTimeFeeRate": "653499953050042",
+          "redeemedCollateral": "161823493653",
+          "redeemedDebt": "166568450540",
+          "redeemedCollateralValue": "166568450536",
+          "redemptionImpact": "4",
+          "closeoutCollateral": "0",
+          "closeoutDebt": "0",
+          "closeoutCollateralValue": "0",
+          "closeoutNetValue": null,
+          "elapsedSeconds": null,
+          "ppsChange": "6132398872552753",
+          "collateralValueChange": null,
+          "accruedInterest": null,
+          "recurringPnl": null,
+          "postOpenPnl": null,
+          "grossAnnualIncome": "4770513286",
+          "annualBorrowCost": "3364569066",
+          "annualNetCarry": "1405944220",
+          "ltv": "871882730755807829",
+          "leverage": "7805349004855816021",
+          "equityApr": "145030459005062317",
+          "rateSpread": "12046925632242790",
+          "cleanOpenBaseline": false,
+          "pnl": null,
+          "returnOnOpeningEquity": null,
+          "returnOnInitialCapital": null,
+          "recurringReturnOnInitialCapital": null,
+          "annualizedRecurringReturn": null,
+          "feeAdjustedAnnualizedReturn": null
+        }
+      }
+    ]
+  },
+  "borrowTransaction": {
+    "hash": "0xde4232599143c16be80993b87d6aac27eab43c77d4fe948e4ffb9a963dddf405",
+    "block": 25990923,
+    "timestamp": "2026-09-16T15:25:59.000000Z",
+    "to": "0x8ee72c388aA73096338EE18CD46a39D98b8983c9",
+    "status": "ok",
+    "input": "0xf8e61b69405d3e1fede335d8e89fc0e09e204e86060a491a9b7d756dde5176290bbcfebb00000000000000000000000000000000000000000000000000000003b9aca000000000000000000000000000000000000000000000000000000000000021819000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000394d79e7f",
+    "note": "Explorer decoded parameter names are from a mismatched ABI; interpret calldata using the verified Flex implementation ABI."
+  }
+}

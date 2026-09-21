@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/Aeonik-Bold.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Aeonik Mono";
+  src: url("/fonts/AeonikMono-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --text-secondary: #6a6a6a;
+  --divider-strong: #cccccc;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #fafafa;
+  --text-secondary: #d8d8d8;
+  --divider-strong: #404040;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  overflow-y: scroll;
+  background: var(--bg);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Aeonik", system-ui, sans-serif;
+}
+
+.tracker-page .theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 400;
+  min-height: 44px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.theme-switch-track {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border: 1px solid var(--divider-strong);
+  border-radius: 999px;
+}
+
+.theme-switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--divider-strong);
+  border-radius: 50%;
+  background: var(--bg);
+  transition: transform 140ms ease;
+}
+
+.theme-switch[aria-checked="true"] .theme-switch-knob {
+  transform: translateX(16px);
+}
+.theme-switch-label {
+  min-width: 4ch;
+}
+
+.page-shell {
+  padding: 0 16px 64px;
+}
+
+.tracker-status,
+.wallet-manager-message {
+  display: block;
+}
+
+@media (max-width: 620px) {
+  .page-shell {
+    padding: 0 0 48px;
+  }
+}

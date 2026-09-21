@@ -1,0 +1,7 @@
+{
+  "installCommand": "bun install --frozen-lockfile",
+  "rewrites": [
+    { "source": "/api/flex-rpc", "destination": "/api/flex-rpc" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
